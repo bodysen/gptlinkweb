@@ -1,9 +1,6 @@
 {
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "http://ai.micropdf.top/api/\$1"
-    }
+      { "source": "/api/:splat", "destination": "http://ai.micropdf.top/api/:splat" }
   ]
 }
 
