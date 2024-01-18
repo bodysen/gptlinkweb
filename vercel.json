@@ -1,20 +1,11 @@
 {
-  "rewrites": [
+"routes": [
     {
-      "source": "/api/:splat",
-      "destination": "http://43.136.45.112/api/:splat"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Referrer-Policy",
-          "value": "no-referrer-when-downgrade"
-        }
-      ]
+      "src": "/api/(.*)",
+      "dest": "http://43.136.45.112/api/$1"
     }
   ]
 }
+
+
 
