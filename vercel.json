@@ -1,6 +1,10 @@
 {
-  "routes": [
-    { "handle": "rewrite", "source": "/api/(.*)", "destination": "http://43.136.45.112/api/\$1" }
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "http://43.136.45.112/api/:splat"
+    }
   ]
 }
+
 
