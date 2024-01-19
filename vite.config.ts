@@ -9,14 +9,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  server: {
-    host: '0.0.0.0',
-    proxy: {
-      '/api': {
-        target: 'http://43.136.45.112', // 后台的地址
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, '')
-      }
-    }
-  },
 });
