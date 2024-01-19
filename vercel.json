@@ -3,6 +3,10 @@
     {
       "source": "/backend/(.*)",
       "destination": "/api/proxy.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/\$1"
     }
   ]
- }
+}
