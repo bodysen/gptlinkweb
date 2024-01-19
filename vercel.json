@@ -1,8 +1,8 @@
 {
   "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "destination": "http://43.136.45.112/api/$1"
-      }
-    ]
-  }
+    {
+      "source": "/backend/(.*)",
+      "destination": "/api/proxy"
+    }
+  ]
+ }
