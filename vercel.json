@@ -1,4 +1,4 @@
-  "rewrites": [
+{  "rewrites": [
       {
         "source": "/backend/(.*)",
         "destination": "http://43.136.45.112/api/$1"
