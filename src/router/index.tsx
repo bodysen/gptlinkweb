@@ -9,6 +9,7 @@ import Salesman from '@/pages/salesman';
 import Layout from '@/layout/index';
 import ErrorPage from '@/pages/error-page';
 import toast from 'react-hot-toast';
+import Monkeyhome from '@/pages/monkeyhome';
 
 const authRedirect = () => {
   if (!localStorage.getItem(StoreKey.AccessToken)) {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         path: 'salesman',
         element: <Salesman />,
         loader: authRedirect,
+      },
+      {
+        path: 'monkeyhome',
+        element: <Monkeyhome />,
+        index: true,
       },
     ],
   },
