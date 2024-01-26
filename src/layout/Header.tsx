@@ -138,12 +138,20 @@ export default function Header({ isPlain = false }) {
   const [appConfig, theme, setTheme] = useAppStore((state) => [state.appConfig, state.theme, state.setTheme]);
 
   const handleNavToChat = () => {
-    navigate('/chat');
+    navigate('/monkeyhome');
   };
 
   const location = useLocation();
 
   const navList = [
+    {
+      path: 'monkeyhome',
+      name: t('monkey home'),
+    },
+    {
+      path: 'chat',
+      name: t('chat'),
+    },
     {
       path: 'user',
       name: t('user center'),
@@ -180,11 +188,13 @@ export default function Header({ isPlain = false }) {
       </div>
 
       <div className="flex items-center gap-2">
+        {/* 
         <Link to="https://github.com/gptlink/gptlink-web" target="_blank">
           <Button variant="ghost" className="p-0 px-2">
             <Github size={18} />
           </Button>
         </Link>
+        */}
         <ThemeMode />
         {!isPlain && <UserDropDown />}
       </div>
