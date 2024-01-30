@@ -1,7 +1,7 @@
 {  "rewrites": [
       {
         "source": "/backend/(.*)",
-        "destination": "http://43.136.45.112/api/$1"
+        "destination": "http://65.49.198.13/api/$1"
       }
     ]
   }
