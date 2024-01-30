@@ -7,7 +7,7 @@ const {
     let target = ''
   
     if (req.url.startsWith('/backend')) {
-      target = 'http://43.136.45.112'
+      target = 'http://65.49.198.13'
     }
 
     createProxyMiddleware({
