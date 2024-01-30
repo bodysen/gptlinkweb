@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: 'chat',
         element: <Chat />,
-        index: true,
+        loader: authRedirect,
       },
       {
         path: 'user',
