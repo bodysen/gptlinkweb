@@ -1,52 +1,49 @@
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 
 export default function Monkeyhome() {
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-gray-100">
-      <header className="bg-white dark:bg-gray-900 py-4">
-        <div className="container mx-auto px-4">
-          <nav className="flex justify-between items-center">
-            <div className="flex items-center">
-              <span className="text-xl font-semibold text-gray-800 dark:text-white">
-                monkey software
-              </span>
-            </div>
-            <div>
-              <Link to="/monkeyhome" className="mr-4 text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white">
-                About
-              </Link>
-              <Link to="/chat" className="mr-4 text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white">
-                Services
-              </Link>
-              <Link to="/chat" className="text-gray-600 dark:text-gray-200 hover:text-gray-800 dark:hover:text-white">
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
-              Welcome to monkey software
-            </h1>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis leo eu sem laoreet, sit amet tempus odio facilisis.
-            </p>
-            <Button variant={'destructive'} className="mt-2">
-              <Link to="/chat">Get Started</Link>
-            </Button>
-          </div>
-          <div className="bg-gray-300 rounded-lg"></div>
-        </div>
-      </main>
-      <footer className="bg-gray-800 py-4">
-        <div className="container mx-auto px-4 text-center text-gray-300">
-          &copy; {new Date().getFullYear()} Monkey Software. All rights reserved.
-        </div>
-      </footer>
+    <div className="flex h-screen w-full items-center justify-center bg-tech">
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+          .bg-tech {
+            background: linear-gradient(135deg, #24c6dc, #514a9d);
+            position: relative;
+            font-family: 'Orbitron', sans-serif;
+          }
+          .bg-tech::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><filter id="noise" x="0%" y="0%" width="100%" height="100%"><feTurbulence baseFrequency="0.02" numOctaves="3" stitchTiles="stitch" type="fractalNoise" /></filter><rect width="100%" height="100%" filter="url(%23noise)"></rect></svg>') center/cover;
+            opacity: 0.1;
+          }
+          h1 {
+            font-weight: 700; /* Orbitron Bold */
+            color: white;
+            margin-bottom: 0.5em;
+          }
+          p {
+            font-weight: 400; /* Orbitron Regular */
+            color: #dcdcdc;
+            margin-bottom: 1em;
+          }
+          .button {
+            font-weight: 400; /* Orbitron Regular */
+          }
+        `}
+      </style>
+      <section className="text-center z-10 relative">
+        <h1 className="text-6xl">Monkey Software</h1>
+        <p className="text-xl">探索我们的世界</p>
+        <Link to="/chat" className="mt-8 inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+          开始体验
+        </Link>
+      </section>
     </div>
   );
 }
