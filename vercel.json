@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/backend/(.*)",
-      "destination": "http://65.49.198.13/api/$1"
+      "destination": "http://${API_HOST}/api/$1"
     },
     {
       "source": "/(.*)",
