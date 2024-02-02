@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { MoonIcon, Sun, Laptop, Languages } from 'lucide-react';
 
 import { useAppStore, ThemeModeType, LanguagesType, useUserStore } from '@/store';
