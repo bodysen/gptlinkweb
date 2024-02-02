@@ -141,8 +141,6 @@ export default function Header({ isPlain = false }) {
     navigate('/monkeyhome');
   };
 
-  const location = useLocation();
-
   const navList = [
     {
       path: 'monkeyhome',
