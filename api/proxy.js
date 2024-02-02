@@ -9,7 +9,7 @@ export const BACKEND_HOST = import.meta.env.API_HOST;
     let target = ''
   
     if (req.url.startsWith('/backend')) {
-      target = 'http://${BACKEND_HOST}'
+      target = `http://${BACKEND_HOST}`;
     }
 
     createProxyMiddleware({
