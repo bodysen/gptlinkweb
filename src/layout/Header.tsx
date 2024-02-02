@@ -170,15 +170,15 @@ export default function Header({ isPlain = false }) {
     <div className="flex items-center justify-between border-b px-4 py-3">
       <div className="flex items-center">
         <button className="flex items-center gap-2 text-lg font-semibold" onClick={() => handleNavToChat()}>
-          <img src={appConfig.web_logo} className="h-10 w-10 rounded-full" />
-          {appConfig.name}
+          <img src={appConfig.web_logo} className="h-12 w-12 rounded-full" />
+          {/* {appConfig.name}*/}
         </button>
         {!isPlain && (
           <>
             <Separator className="mx-4 h-6" orientation="vertical" />
             {navList.map((item, index) => (
               <Link to={item.path} key={index}>
-                <Button className="mr-1" variant={location.pathname.includes(item.path) ? 'default' : 'ghost'}>
+                <Button className="mr-1" variant={'ghost'}>
                   {item.name}
                 </Button>
               </Link>
