@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex flex-1 overflow-hidden">
       {/*{!isMobileScreen && <Conversation />}*/}
       <div style={{ width: '100%', height: '100%'}}>
-        <iframe src="https://gpt.micropdf.top" style={{ width: '100%', height: '100%' }}></iframe>
+        <iframe src="https://ai.micropdf.top" style={{ width: '100%', height: '100%' }}></iframe>
       </div>
         {/* <Chat /> */}
     </div>
