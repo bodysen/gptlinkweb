@@ -5,17 +5,15 @@ import { useUserStore } from '@/store';
 import { useEffect } from 'react';
 
 export default function Home() {
-  //const isMobileScreen = useMobileScreen();
+  const [{ nickname, avatar }] = useUserStore((state) => [state.userInfo]);
   useEffect(() => {
     const iframe = document.querySelector('iframe');
     if (iframe) {
-      const [{ nickname, avatar }] = useUserStore((state) => [state.userInfo]);
-      //const userInfo = { nickname, avatar };
       console.log('Nickname:', nickname);
       console.log('Avatar:', avatar);
-      //iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
+      // iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
     }
-  }, []); // 在组件挂载时执行
+  }, [nickname, avatar]);
   return (
     <div className="flex flex-1 overflow-hidden">
       {/*{!isMobileScreen && <Conversation />}*/}
