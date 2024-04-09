@@ -2,7 +2,7 @@
 //import Conversation from './Conversation';
 //import { useMobileScreen } from '@/hooks/use-mobile-screen';
 import { useUserStore } from '@/store';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
   //const isMobileScreen = useMobileScreen();
