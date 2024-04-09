@@ -6,14 +6,15 @@ import { useEffect } from 'react';
 
 export default function Home() {
   const [{ nickname, avatar }] = useUserStore((state) => [state.userInfo]);
+  const userInfo = { nickname, avatar };
   useEffect(() => {
     const iframe = document.querySelector('iframe');
     if (iframe) {
       console.log('Nickname:', nickname);
       console.log('Avatar:', avatar);
-      // iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
+      iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
     }
-  }, [nickname, avatar]);
+  }, [nickname, avatar, userInfo]);
   return (
     <div className="flex flex-1 overflow-hidden">
       {/*{!isMobileScreen && <Conversation />}*/}
