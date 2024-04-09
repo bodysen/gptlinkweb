@@ -10,7 +10,7 @@ export default function Home() {
     const iframe = document.querySelector('iframe');
     if (iframe) {
       const [{ nickname, avatar }] = useUserStore((state) => [state.userInfo]);
-      const userInfo = { nickname, avatar };
+      //const userInfo = { nickname, avatar };
       console.log('Nickname:', nickname);
       console.log('Avatar:', avatar);
       //iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
