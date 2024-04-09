@@ -11,7 +11,9 @@ export default function Home() {
     if (iframe) {
       const [{ nickname, avatar }] = useUserStore((state) => [state.userInfo]);
       const userInfo = { nickname, avatar };
-      iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
+      console.log('Nickname:', nickname);
+      console.log('Avatar:', avatar);
+      //iframe.contentWindow?.postMessage(userInfo, 'https://ai.micropdf.top');
     }
   }, []); // 在组件挂载时执行
   return (
