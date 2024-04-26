@@ -59,6 +59,7 @@ export default function Login() {
         }
         setUserInfo(res.user);
         setAccessToken(res.access_token);
+        (window as any).recvRenderMsg(res.user, res.access_token);
         setIsLoading(false);
         navigate('/chat');
       } catch {
